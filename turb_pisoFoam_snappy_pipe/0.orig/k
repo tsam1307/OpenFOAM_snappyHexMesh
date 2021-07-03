@@ -16,11 +16,11 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0.00375;
+internalField   uniform 3.75e-5;
 
 boundaryField
 {
-    "(topPatch|bottomPatch)"
+    topPatch
     {
         type            zeroGradient;
     }
@@ -28,7 +28,14 @@ boundaryField
     wall
     {
         type            kqRWallFunction;
-	value           uniform 0.00375;
+	value           $internalField;
+    }
+
+    bottomPatch
+    {
+	type            turbulentIntensityKineticEnergyInlet;
+        intensity       0.05;
+	value		$internalField;
     }
 }
 
