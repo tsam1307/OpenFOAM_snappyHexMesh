@@ -1,0 +1,121 @@
+--------------------------------------------------------------------------
+WARNING: Linux kernel CMA support was requested via the
+btl_vader_single_copy_mechanism MCA variable, but CMA support is
+not available due to restrictive ptrace settings.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: DESKTOP-DOBVM7I
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : checkMesh -parallel
+Date   : Jul 10 2021
+Time   : 17:45:34
+Host   : DESKTOP-DOBVM7I
+PID    : 2489
+I/O    : uncollated
+Case   : /mnt/c/Users/TSam/GitHub_OpenFOAM/OpenFOAM_snappyHexMesh/refined_pisoFoam_snappyPipe
+nProcs : 2
+Hosts  :
+(
+    (DESKTOP-DOBVM7I 2)
+)
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0
+
+Mesh stats
+    points:           205171
+    faces:            547662
+    internal faces:   497594
+    cells:            171728
+    faces per cell:   6.0867
+    boundary patches: 3 (4 4)
+    point zones:      0
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     141720
+    prisms:        19664
+    wedges:        0
+    pyramids:      0
+    tet wedges:    32
+    tetrahedra:    0
+    polyhedra:     10312
+    Breakdown of polyhedra by number of faces:
+        faces   number of cells
+            4   32
+            5   96
+            6   2568
+            7   48
+            8   32
+            9   3784
+           10   32
+           12   3416
+           14   48
+           15   256
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Number of regions: 1 (OK).
+
+Checking basic patch addressing...
+                   Patch    Faces   Points
+                topPatch     1768     1937
+                    wall    46048    46740
+             bottomPatch     1768     1937
+
+Checking basic faceZone addressing...
+    No faceZones found.
+
+Checking basic cellZone addressing...
+    No cellZones found.
+
+Checking geometry...
+    Overall domain bounding box (-0.5 -0.500002 -1.90735e-06) (0.5 0.499997 40)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (3.71004e-16 1.43734e-16 3.62244e-17) OK.
+    Max cell openness = 2.99094e-16 OK.
+    Max aspect ratio = 4.18898 OK.
+    Minimum face area = 4.91109e-05. Maximum face area = 0.0108398.  Face area magnitudes OK.
+    Min volume = 4.11134e-07. Max volume = 0.00111713.  Total volume = 31.327.  Cell volumes OK.
+    Mesh non-orthogonality Max: 48.0278 average: 8.74268
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 1.20403 OK.
+    Coupled point location match (average 0) OK.
+
+Mesh OK.
+
+End
+
+Finalising parallel run
+[DESKTOP-DOBVM7I:02485] 1 more process has sent help message help-btl-vader.txt / cma-permission-denied
+[DESKTOP-DOBVM7I:02485] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
