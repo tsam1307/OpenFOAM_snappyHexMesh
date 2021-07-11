@@ -9,9 +9,9 @@ Build  : _7bdb509494-20201222 OPENFOAM=2012
 Arch   : "LSB;label=32;scalar=64"
 Exec   : decomposePar
 Date   : Jul 10 2021
-Time   : 17:44:07
+Time   : 18:52:57
 Host   : DESKTOP-DOBVM7I
-PID    : 2434
+PID    : 2649
 I/O    : uncollated
 Case   : /mnt/c/Users/TSam/GitHub_OpenFOAM/OpenFOAM_snappyHexMesh/refined_pisoFoam_snappyPipe
 nProcs : 1
@@ -31,7 +31,7 @@ Create mesh
 Calculating distribution of cells
 Selecting decompositionMethod scotch [2]
 
-Finished decomposition in 0.02 s
+Finished decomposition in 0.35 s
 
 Calculating original mesh data
 
@@ -42,27 +42,34 @@ Distributing faces to processors
 Distributing points to processors
 
 Constructing processor meshes
+Reading hexRef8 data : cellLevel
+Reading hexRef8 data : pointLevel
+Reading hexRef8 data : level0Edge
 
 Processor 0
-    Number of cells = 1250
-    Number of faces shared with processor 1 = 25
+    Number of cells = 85864
+    Number of faces shared with processor 1 = 220
     Number of processor patches = 1
-    Number of processor faces = 25
-    Number of boundary faces = 1025
+    Number of processor faces = 220
+    Number of boundary faces = 24792
 
 Processor 1
-    Number of cells = 1250
-    Number of faces shared with processor 0 = 25
+    Number of cells = 85864
+    Number of faces shared with processor 0 = 220
     Number of processor patches = 1
-    Number of processor faces = 25
-    Number of boundary faces = 1025
+    Number of processor faces = 220
+    Number of boundary faces = 24792
 
-Number of processor faces = 25
-Max number of cells = 1250 (0% above average 1250)
+Number of processor faces = 220
+Max number of cells = 85864 (0% above average 85864)
 Max number of processor patches = 1 (0% above average 1)
-Max number of faces between processors = 25 (0% above average 25)
+Max number of faces between processors = 220 (0% above average 220)
 
 Time = 0
+--> FOAM Warning : 
+    From const Foam::HashTable<Foam::List<int> >& Foam::polyBoundaryMesh::groupPatchIDs() const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 510
+    Removed patchGroup 'wall' which clashes with patch 1 of the same name.
 
 Processor 0: field transfer
 Processor 1: field transfer

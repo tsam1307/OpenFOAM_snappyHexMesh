@@ -10,31 +10,37 @@ FoamFile
     version     2.0;
     format      ascii;
     class       volVectorField;
+    location    "0";
     object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 dimensions      [0 1 -1 0 0 0 0];
 
+
 internalField   uniform (0 0 0.1);
 
 boundaryField
 {
-    bottomPatch
-    {
-        type            fixedValue;
-        value           uniform (0 0 0.1);
-    }
-
-    wall
-    {
-        type            noSlip;
-    }
-
     topPatch
     {
         type            zeroGradient;
     }
+    wall
+    {
+        type            noSlip;
+    }
+    bottomPatch
+    {
+        type            fixedValue;
+        value           nonuniform List<vector> 0();
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           uniform (0 0 0.1);
+    }
 }
+
 
 // ************************************************************************* //
