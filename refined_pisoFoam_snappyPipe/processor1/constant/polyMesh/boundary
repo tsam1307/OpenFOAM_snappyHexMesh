@@ -20,7 +20,7 @@ FoamFile
     topPatch
     {
         type            patch;
-        nFaces          1768;
+        nFaces          0;
         startFace       248808;
     }
     wall
@@ -28,13 +28,13 @@ FoamFile
         type            wall;
         inGroups        1(wall);
         nFaces          23024;
-        startFace       250576;
+        startFace       248808;
     }
     bottomPatch
     {
         type            patch;
-        nFaces          0;
-        startFace       273600;
+        nFaces          1768;
+        startFace       271832;
     }
     procBoundary1to0
     {

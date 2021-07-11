@@ -35,7 +35,7 @@ boundaryField
     {
         type            turbulentMixingLengthDissipationRateInlet;
         mixingLength    0.07;
-        value           uniform 5.39e-07;
+        value           nonuniform List<scalar> 0();
     }
     procBoundary0to1
     {

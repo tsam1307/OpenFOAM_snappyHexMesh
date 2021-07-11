@@ -9,4 +9,4 @@ runApplication blockMesh
 runApplication snappyHexMesh -overwrite
 runApplication topoSet
 runApplication createPatch -overwrite
-touch snappy_pipe.foam
+touch refined_snappy_pipe.foam

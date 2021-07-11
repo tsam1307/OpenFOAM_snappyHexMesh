@@ -1,3 +1,13 @@
+--------------------------------------------------------------------------
+WARNING: Linux kernel CMA support was requested via the
+btl_vader_single_copy_mechanism MCA variable, but CMA support is
+not available due to restrictive ptrace settings.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: DESKTOP-DOBVM7I
+--------------------------------------------------------------------------
 /*---------------------------------------------------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
@@ -7,14 +17,23 @@
 \*---------------------------------------------------------------------------*/
 Build  : _7bdb509494-20201222 OPENFOAM=2012
 Arch   : "LSB;label=32;scalar=64"
-Exec   : createPatch -overwrite
-Date   : Jul 10 2021
-Time   : 18:52:53
+Exec   : createPatch -parallel -overwrite
+Date   : Jul 11 2021
+Time   : 10:45:07
 Host   : DESKTOP-DOBVM7I
-PID    : 2647
+PID    : 3432
 I/O    : uncollated
 Case   : /mnt/c/Users/TSam/GitHub_OpenFOAM/OpenFOAM_snappyHexMesh/refined_pisoFoam_snappyPipe
-nProcs : 1
+nProcs : 2
+Hosts  :
+(
+    (DESKTOP-DOBVM7I 2)
+)
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
 allowSystemOperations : Allowing user-supplied system call operations
@@ -58,3 +77,6 @@ Writing repatched mesh to 0
 
 End
 
+Finalising parallel run
+[DESKTOP-DOBVM7I:03428] 1 more process has sent help message help-btl-vader.txt / cma-permission-denied
+[DESKTOP-DOBVM7I:03428] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

@@ -25,7 +25,7 @@ boundaryField
     topPatch
     {
         type            fixedValue;
-        value           nonuniform List<scalar> 0();
+        value           uniform 0;
     }
     wall
     {

@@ -35,7 +35,7 @@ boundaryField
     {
         type            turbulentIntensityKineticEnergyInlet;
         intensity       0.05;
-        value           nonuniform List<scalar> 0();
+        value           uniform 3.75e-05;
     }
     procBoundary1to0
     {

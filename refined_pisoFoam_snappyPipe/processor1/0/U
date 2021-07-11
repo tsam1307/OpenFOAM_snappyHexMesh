@@ -33,7 +33,7 @@ boundaryField
     bottomPatch
     {
         type            fixedValue;
-        value           nonuniform List<vector> 0();
+        value           uniform (0 0 0.1);
     }
     procBoundary1to0
     {
