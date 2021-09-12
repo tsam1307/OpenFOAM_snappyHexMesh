@@ -38,6 +38,14 @@ solvers
         tolerance       1e-05;
         relTol          0;
     }
+
+    "(U|k|epsilon|omega|R|nuTilda)Final"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-05;
+        relTol          0;
+    }
 }
 
 PISO
