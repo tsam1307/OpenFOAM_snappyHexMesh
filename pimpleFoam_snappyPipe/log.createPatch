@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------
+WARNING: Linux kernel CMA support was requested via the
+btl_vader_single_copy_mechanism MCA variable, but CMA support is
+not available due to restrictive ptrace settings.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: DESKTOP-DOBVM7I
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : createPatch -parallel -overwrite
+Date   : Sep 12 2021
+Time   : 15:21:44
+Host   : DESKTOP-DOBVM7I
+PID    : 11303
+I/O    : uncollated
+Case   : /mnt/c/Users/TSam/GitHub_OpenFOAM/OpenFOAM_snappyHexMesh/pimpleFoam_snappyPipe
+nProcs : 2
+Hosts  :
+(
+    (DESKTOP-DOBVM7I 2)
+)
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading "system/createPatchDict"
+
+Adding new patch topPatch as patch 1 from 
+{
+    type            patch;
+}
+
+Adding new patch wall as patch 2 from 
+{
+    type            wall;
+}
+
+Adding new patch bottomPatch as patch 3 from 
+{
+    type            patch;
+}
+
+
+Read 1768 faces from faceSet topPatch
+Read 46048 faces from faceSet wall
+Read 1768 faces from faceSet bottomPatch
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+Removing zero-sized patch cylinder type wall at position 0
+Removing patches.
+Writing repatched mesh to 0
+
+[DESKTOP-DOBVM7I:11299] 1 more process has sent help message help-btl-vader.txt / cma-permission-denied
+[DESKTOP-DOBVM7I:11299] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+End
+
+Finalising parallel run

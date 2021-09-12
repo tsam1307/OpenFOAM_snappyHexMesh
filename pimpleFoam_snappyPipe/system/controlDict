@@ -47,7 +47,7 @@ runTimeModifiable true;
 
 adjustTimeStep  yes;
 
-maxCo           2;
+maxCo           10;
 
 
 

@@ -58,20 +58,20 @@ PISO
 
 PIMPLE
 {
-    nNonOrthogonalCorrectors 2;
-    nCorrectors          3;
+    nNonOrthogonalCorrectors 1;
+    nCorrectors          1;
     nOuterCorrectors    1000;
 
     residualControl
     {
         U
         {
-                tolerance  1e-5;
+                tolerance  1e-3;
                 relTol      0;
         }
         p
         {
-                tolerance  5e-4;
+                tolerance  5e-2;
                 relTol      0;
         }
      }
