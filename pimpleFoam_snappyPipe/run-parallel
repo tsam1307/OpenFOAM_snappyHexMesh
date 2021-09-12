@@ -1,10 +1,10 @@
 cd "${0%/*}" || exit                                # Run from this directory
 . ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
 
-rm -r log.pisoFoam
+rm -r log.pimpleFoam
 
 
 restore0Dir
 runApplication decomposePar -force
-runParallel pisoFoam
+runParallel pimpleFoam
 runApplication reconstructPar

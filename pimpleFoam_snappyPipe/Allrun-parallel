@@ -13,10 +13,10 @@ runParallel createPatch -overwrite
 reconstructParMesh -constant -mergeTol 1E-06 > log.reconstructParMesh
 touch refined_snappy_pipe.foam
 
-rm -r log.pisoFoam
+rm -r log.pimpleFoam
 
 restore0Dir
 runApplication decomposePar -force
-runParallel pisoFoam
+runParallel pimpleFoam
 runApplication reconstructPar
 #reconstruction complete :) means i can view results...
